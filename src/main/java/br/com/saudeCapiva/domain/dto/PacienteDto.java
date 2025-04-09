@@ -1,21 +1,24 @@
 package br.com.saudeCapiva.domain.dto;
 
-import br.com.saudeCapiva.domain.Especialidade;
+import br.com.saudeCapiva.domain.entity.Consulta;
+import br.com.saudeCapiva.domain.entity.Medico;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class MedicoDto {
+public class PacienteDto {
 
     private Long id;
     private String nome;
-    private String crm;
+    private String documento;
     private String email;
     private String senha;
-    private Especialidade especialidade;
-    private String telefone;
+    private List<Consulta> consultas;
+    private Medico medico;
 
 }
